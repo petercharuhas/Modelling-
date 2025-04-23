@@ -1,0 +1,39 @@
+Modelling Part 2
+
+1. Outer Space
+CREATE TABLE planets (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  orbital_period_in_years FLOAT NOT NULL,
+  orbits_around TEXT NOT NULL,
+  galaxy TEXT NOT NULL,
+  moons TEXT[]
+);
+
+
+2. Air Traffic
+CREATE TABLE tickets (
+  id SERIAL PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  seat TEXT NOT NULL,
+  departure TIMESTAMP NOT NULL,
+  arrival TIMESTAMP NOT NULL,
+  airline TEXT NOT NULL,
+  from_city TEXT NOT NULL,
+  from_country TEXT NOT NULL,
+  to_city TEXT NOT NULL,
+  to_country TEXT NOT NULL
+);
+
+
+3. Music
+CREATE TABLE songs (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  duration_in_seconds INTEGER NOT NULL,
+  release_date DATE NOT NULL,
+  artists TEXT[] NOT NULL,
+  album TEXT NOT NULL,
+  producers TEXT[] NOT NULL
+);
